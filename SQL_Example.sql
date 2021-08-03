@@ -1,0 +1,35 @@
+-- PAY 내림차순
+SELECT NAME
+      ,PAY
+      ,DEPTNO
+    FROM PROFESSOR
+ORDER BY PAY DESC;
+
+
+--DEPTNO 내림차순, 연봉 오름차순
+SELECT PROFNO
+     , NAME
+     , PAY
+     , PAY*12 "연봉"
+     , DEPTNO
+    FROM PROFESSOR
+ORDER BY DEPTNO DESC, 연봉 ASC;
+
+
+-- WHERE 조건문 사용하여 출력
+SELECT NAME
+      ,PAY
+      ,BONUS
+    FROM professor
+    WHERE (PAY >= 300 AND BONUS IS NOT NULL) OR PAY >= 450;
+
+
+SELECT NAME
+      ,STUDNO 학생번호
+    FROM STUDENT
+    WHERE DEPTNO1 = 201
+UNION ALL
+SELECT NAME
+      ,PROFNO 교수번호
+    FROM PROFESSOR
+    WHERE DEPTNO = 201;
