@@ -1,0 +1,4 @@
+SELECT NAME
+     , ID
+  FROM STUDENT
+ WHERE REGEXP_LIKE(ID,'^M(a|o)');
